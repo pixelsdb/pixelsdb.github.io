@@ -13,23 +13,31 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="container">
-      <a class="brand" href="#top">PixelsDB</a>
-      <nav class="site-nav" aria-label="Primary">
-        <a href="#overview">Overview</a>
-        <a href="#ecosystem">Ecosystem</a>
-        <a href="#research">Research</a>
-        <a href="#get-started">Get started</a>
-      </nav>
+    <div class="container site-header-top">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">PixelsDB</span>
+      </a>
+      <a class="source-link" href="https://github.com/pixelsdb/pixels">pixelsdb/pixels</a>
     </div>
+    <nav class="site-nav" aria-label="Primary">
+      <div class="container site-nav-list">
+        <a class="nav-link nav-link-active" href="index.html">Home</a>
+        <a class="nav-link" href="documents.html">Documents</a>
+        <a class="nav-link" href="publications.html">Publications</a>
+        <a class="nav-link" href="#research">Research</a>
+      </div>
+    </nav>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="container hero-layout">
+    <section class="hero hero-home">
+      <div class="container">
         <div class="hero-copy">
-          <p class="eyebrow">Cloud-native analytics for data lakes and warehouses</p>
-          <h1>PixelsDB brings storage, query acceleration, and real-time freshness together.</h1>
+          <p class="eyebrow">Open analytics platform for data lakes and warehouses</p>
+          <h1>PixelsDB</h1>
+          <p class="hero-kicker">High-performance storage, serverless elasticity, freshness, and interactivity.</p>
+          <hr class="intro-divider">
           <p class="hero-text">
             The PixelsDB project is centered on <strong>Pixels</strong>, a columnar storage and compute
             engine for analytical workloads. It is designed for on-premises and cloud-native storage,
@@ -37,36 +45,23 @@
             web-based exploration, and CDC-driven data freshness.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="https://github.com/pixelsdb/pixels">Main repository</a>
-            <a class="button" href="https://deepwiki.com/pixelsdb/pixels">DeepWiki</a>
-            <a class="button" href="https://github.com/pixelsdb">GitHub organization</a>
-          </div>
-          <div class="badge-row" aria-label="Project badges">
-            <img alt="Daily build status" src="https://github.com/pixelsdb/pixels/actions/workflows/daily-build.yml/badge.svg">
-            <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/pixelsdb/pixels/master">
-            <img alt="GitHub license" src="https://img.shields.io/github/license/pixelsdb/pixels">
-            <img alt="DeepWiki available" src="https://deepwiki.com/badge.svg">
+            <a class="button button-primary" href="documents.html">Read the docs</a>
+            <a class="button" href="https://github.com/pixelsdb/pixels">Main repository</a>
+            <a class="button" href="publications.html">Publications</a>
           </div>
         </div>
-
-        <aside class="hero-panel">
-          <h2>At a glance</h2>
-          <ul class="feature-list">
-            <li>Columnar file format optimized for analytical tables</li>
-            <li>Storage backends spanning S3, GCS, HDFS, Redis, HTTP, and local file systems</li>
-            <li>Integrations with DuckDB, Trino, StarRocks, PrestoDB, Hive, Spark, and PostgreSQL</li>
-            <li>Hybrid execution via Pixels-Turbo and serverless acceleration</li>
-            <li>CDC-based freshness through the Pixels-Retina framework</li>
-          </ul>
-        </aside>
       </div>
     </section>
-
+ 
     <section id="overview" class="section">
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">Overview</p>
           <h2>Main features of PixelsDB</h2>
+          <p>
+            PixelsDB combines the core Pixels engine with elasticity, transactional freshness, and
+            interactive query experiences for modern analytical systems.
+          </p>
         </div>
         <div class="card-grid four-up">
           <article class="card">
@@ -104,7 +99,7 @@
         </div>
       </div>
     </section>
-
+ 
     <section class="section section-alt">
       <div class="container">
         <div class="section-heading">
@@ -143,113 +138,7 @@
         </div>
       </div>
     </section>
-
-    <section id="ecosystem" class="section">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Ecosystem</p>
-          <h2>Representative repositories</h2>
-          <p>
-            The GitHub organization includes the core engine, integrations, supporting services, and
-            educational or experimental projects around PixelsDB.
-          </p>
-        </div>
-
-        <div class="repo-grid">
-          <article class="repo-card repo-card-featured">
-            <div class="repo-card-header">
-              <h3><a href="https://github.com/pixelsdb/pixels">pixelsdb/pixels</a></h3>
-              <span class="repo-tag">Main project</span>
-            </div>
-            <p>
-              The flagship repository for PixelsDB: core storage engine, query integrations, build
-              instructions, deployment guides, and research context.
-            </p>
-          </article>
-
-          <article class="repo-card">
-            <h3><a href="https://github.com/pixelsdb/pixels-rover">pixelsdb/pixels-rover</a></h3>
-            <p>Web-based query interface for serverless analytics and flexible service levels.</p>
-          </article>
-
-          <article class="repo-card">
-            <h3><a href="https://github.com/pixelsdb/pixels-trino">pixelsdb/pixels-trino</a></h3>
-            <p>Pixels connector for Trino deployments and MPP-oriented analytics workflows.</p>
-          </article>
-
-          <article class="repo-card">
-            <h3><a href="https://github.com/pixelsdb/pixels-presto">pixelsdb/pixels-presto</a></h3>
-            <p>Connector project for integrating Pixels storage with PrestoDB.</p>
-          </article>
-
-          <article class="repo-card">
-            <h3><a href="https://github.com/pixelsdb/pixels-hive">pixelsdb/pixels-hive</a></h3>
-            <p>Hive SerDe integration for reading and writing Pixels-backed data.</p>
-          </article>
-
-          <article class="repo-card">
-            <h3><a href="https://github.com/pixelsdb/pixels-spark">pixelsdb/pixels-spark</a></h3>
-            <p>Spark datasource support for pipelines that need Pixels-aware processing.</p>
-          </article>
-
-          <article class="repo-card">
-            <h3><a href="https://github.com/pixelsdb/pixels-postgres">pixelsdb/pixels-postgres</a></h3>
-            <p>PostgreSQL FDW integration for bridging Pixels data into PostgreSQL workflows.</p>
-          </article>
-
-          <article class="repo-card">
-            <h3><a href="https://github.com/pixelsdb/pixels-sink">pixelsdb/pixels-sink</a></h3>
-            <p>Data sink services that capture and apply source changes into Pixels.</p>
-          </article>
-
-          <article class="repo-card">
-            <h3><a href="https://github.com/pixelsdb/pixels-spike">pixelsdb/pixels-spike</a></h3>
-            <p>Serverless computing framework used to accelerate query processing bursts.</p>
-          </article>
-
-          <article class="repo-card">
-            <h3><a href="https://github.com/pixelsdb/mini-pixels">pixelsdb/mini-pixels</a></h3>
-            <p>Educational analytic storage engine derived from Pixels for learning and teaching.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="get-started" class="section section-alt">
-      <div class="container">
-        <div class="section-heading">
-          <p class="eyebrow">Get started</p>
-          <h2>Jump into code, docs, and releases</h2>
-        </div>
-        <div class="card-grid three-up">
-          <article class="card">
-            <h3>Source and build</h3>
-            <p>
-              Clone the main repository and build with Maven. The primary documentation lives with
-              the code, including install, evaluation, and development guidance.
-            </p>
-            <a href="https://github.com/pixelsdb/pixels/blob/master/README.md">Open the README</a>
-          </article>
-          <article class="card">
-            <h3>DeepWiki guide</h3>
-            <p>
-              DeepWiki provides a navigable summary of the main repo, covering modules, architecture,
-              deployment, and source file references.
-            </p>
-            <a href="https://deepwiki.com/pixelsdb/pixels">Browse DeepWiki</a>
-          </article>
-          <article class="card">
-            <h3>Daily builds</h3>
-            <p>
-              Use the automated daily release if you want the newest packaged artifacts for early
-              evaluation or local experimentation.
-            </p>
-            <a href="https://github.com/pixelsdb/pixels/releases/tag/daily-latest">Get daily builds</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
+ 
     <section id="research" class="section">
       <div class="container">
         <div class="section-heading">
@@ -260,45 +149,11 @@
             optimization, and serverless analytics.
           </p>
         </div>
-
-        <div class="publication-list">
-          <article class="publication">
-            <h3>How Consistent and Fresh are Lake Tables Really</h3>
-            <p>FORMATS 2026 @ SIGMOD</p>
-          </article>
-          <article class="publication">
-            <h3><a href="https://doi.org/10.1109/ICDE65448.2025.00365">PixelsDB: Serverless and NL-Aided Data Analytics with Flexible Service Levels and Prices</a></h3>
-            <p>ICDE 2025</p>
-          </article>
-          <article class="publication">
-            <h3><a href="https://arxiv.org/abs/2409.01388">Serverless Query Processing with Flexible Performance SLAs and Prices</a></h3>
-            <p>arXiv 2024</p>
-          </article>
-          <article class="publication">
-            <h3><a href="https://doi.org/10.1145/3589306">Using Cloud Functions as Accelerator for Elastic Data Analytics</a></h3>
-            <p>SIGMOD 2023</p>
-          </article>
-          <article class="publication">
-            <h3><a href="https://doi.org/10.48786/edbt.2022.33">Columnar Storage Optimization and Caching for Data Lakes (short)</a></h3>
-            <p>EDBT 2022</p>
-          </article>
-          <article class="publication">
-            <h3><a href="https://doi.org/10.1109/ICDE53745.2022.00276">Pixels: An Efficient Column Store for Cloud Data Lakes</a></h3>
-            <p>ICDE 2022</p>
-          </article>
-          <article class="publication">
-            <h3><a href="https://www.cidrdb.org/cidr2020/gongshow2020/gongshow/abstracts/cidr2020_abstract74.pdf">Pixels: Multiversion Wide Table Store for Data Lakes (abstract)</a></h3>
-            <p>CIDR 2020</p>
-          </article>
-          <article class="publication">
-            <h3><a href="https://doi.org/10.1109/ICDE.2018.00200">Rainbow: Adaptive Layout Optimization for Wide Tables (demo)</a></h3>
-            <p>ICDE 2018</p>
-          </article>
-          <article class="publication">
-            <h3><a href="https://doi.org/10.1145/3035918.3035930">Wide Table Layout Optimization by Column Ordering and Duplication</a></h3>
-            <p>SIGMOD 2017</p>
-          </article>
-        </div>
+        <article class="publication">
+          <h3>Browse the full PixelsDB publication list</h3>
+          <p>See all papers, demos, abstracts, and recent work on the dedicated publications page.</p>
+          <p><a class="button button-primary" href="publications.html">View publications</a></p>
+        </article>
       </div>
     </section>
   </main>

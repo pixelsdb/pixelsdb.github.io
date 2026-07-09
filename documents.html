@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="description"
+    content="Documentation, getting started resources, and ecosystem repositories for PixelsDB."
+  >
+  <title>PixelsDB Documents</title>
+  <link rel="preconnect" href="https://img.shields.io">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container site-header-top">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">PixelsDB</span>
+      </a>
+      <a class="source-link" href="https://github.com/pixelsdb/pixels">pixelsdb/pixels</a>
+    </div>
+    <nav class="site-nav" aria-label="Primary">
+      <div class="container site-nav-list">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link nav-link-active" href="documents.html">Documents</a>
+        <a class="nav-link" href="publications.html">Publications</a>
+        <a class="nav-link" href="index.html#research">Research</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">Documents</p>
+        <h1>PixelsDB Docs</h1>
+        <p class="hero-kicker">Guides, releases, and ecosystem references in one place.</p>
+        <hr class="intro-divider">
+        <p class="hero-text">
+          Find build and release resources for the main project, along with the representative
+          repositories that make up the broader PixelsDB ecosystem.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/pixelsdb/pixels/blob/master/README.md">Open the README</a>
+          <a class="button" href="https://deepwiki.com/pixelsdb/pixels">Browse DeepWiki</a>
+          <a class="button" href="https://github.com/pixelsdb/pixels/releases/tag/daily-latest">Daily builds</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Documents</p>
+          <h2>Guides, references, and releases</h2>
+          <p>
+            Start with the main codebase documentation, browse DeepWiki summaries, or download the
+            latest daily builds for evaluation.
+          </p>
+        </div>
+
+        <div class="card-grid three-up">
+          <article class="card">
+            <h3>Source and build</h3>
+            <p>
+              Clone the main repository and build with Maven. The primary documentation lives with
+              the code, including install, evaluation, and development guidance.
+            </p>
+            <a href="https://github.com/pixelsdb/pixels/blob/master/README.md">Open the README</a>
+          </article>
+          <article class="card">
+            <h3>DeepWiki guide</h3>
+            <p>
+              DeepWiki provides a navigable summary of the main repo, covering modules, architecture,
+              deployment, and source file references.
+            </p>
+            <a href="https://deepwiki.com/pixelsdb/pixels">Browse DeepWiki</a>
+          </article>
+          <article class="card">
+            <h3>Daily builds</h3>
+            <p>
+              Use the automated daily release if you want the newest packaged artifacts for early
+              evaluation or local experimentation.
+            </p>
+            <a href="https://github.com/pixelsdb/pixels/releases/tag/daily-latest">Get daily builds</a>
+          </article>
+        </div>
+
+        <div class="section-heading section-heading-spaced">
+          <p class="eyebrow">Ecosystem</p>
+          <h2>Representative repositories</h2>
+          <p>
+            The GitHub organization includes the core engine, integrations, supporting services, and
+            educational or experimental projects around PixelsDB.
+          </p>
+        </div>
+
+        <div class="repo-grid">
+          <article class="repo-card repo-card-featured">
+            <div class="repo-card-header">
+              <h3><a href="https://github.com/pixelsdb/pixels">pixelsdb/pixels</a></h3>
+              <span class="repo-tag">Main project</span>
+            </div>
+            <p>
+              The flagship repository for PixelsDB: core storage engine, query integrations, build
+              instructions, deployment guides, and research context.
+            </p>
+          </article>
+
+          <article class="repo-card">
+            <h3><a href="https://github.com/pixelsdb/pixels-rover">pixelsdb/pixels-rover</a></h3>
+            <p>Web-based query interface for serverless analytics and flexible service levels.</p>
+          </article>
+
+          <article class="repo-card">
+            <h3><a href="https://github.com/pixelsdb/pixels-trino">pixelsdb/pixels-trino</a></h3>
+            <p>Pixels connector for Trino deployments and MPP-oriented analytics workflows.</p>
+          </article>
+
+          <article class="repo-card">
+            <h3><a href="https://github.com/pixelsdb/pixels-presto">pixelsdb/pixels-presto</a></h3>
+            <p>Connector project for integrating Pixels storage with PrestoDB.</p>
+          </article>
+
+          <article class="repo-card">
+            <h3><a href="https://github.com/pixelsdb/pixels-hive">pixelsdb/pixels-hive</a></h3>
+            <p>Hive SerDe integration for reading and writing Pixels-backed data.</p>
+          </article>
+
+          <article class="repo-card">
+            <h3><a href="https://github.com/pixelsdb/pixels-spark">pixelsdb/pixels-spark</a></h3>
+            <p>Spark datasource support for pipelines that need Pixels-aware processing.</p>
+          </article>
+
+          <article class="repo-card">
+            <h3><a href="https://github.com/pixelsdb/pixels-postgres">pixelsdb/pixels-postgres</a></h3>
+            <p>PostgreSQL FDW integration for bridging Pixels data into PostgreSQL workflows.</p>
+          </article>
+
+          <article class="repo-card">
+            <h3><a href="https://github.com/pixelsdb/pixels-sink">pixelsdb/pixels-sink</a></h3>
+            <p>Data sink services that capture and apply source changes into Pixels.</p>
+          </article>
+
+          <article class="repo-card">
+            <h3><a href="https://github.com/pixelsdb/pixels-spike">pixelsdb/pixels-spike</a></h3>
+            <p>Serverless computing framework used to accelerate query processing bursts.</p>
+          </article>
+
+          <article class="repo-card">
+            <h3><a href="https://github.com/pixelsdb/mini-pixels">pixelsdb/mini-pixels</a></h3>
+            <p>Educational analytic storage engine derived from Pixels for learning and teaching.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-layout">
+      <p>PixelsDB is an open GitHub-centered project for analytics systems research and engineering.</p>
+      <p><a href="https://github.com/pixelsdb">github.com/pixelsdb</a></p>
+    </div>
+  </footer>
+</body>
+</html>
