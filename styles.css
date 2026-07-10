@@ -166,6 +166,8 @@ img {
   display: flex;
   align-items: stretch;
   flex: 0 0 auto;
+  padding-bottom: 0.35rem;
+  margin-bottom: -0.35rem;
 }
 
 .nav-summary {
@@ -185,7 +187,8 @@ img {
 }
 
 .nav-dropdown[open] .nav-summary,
-.nav-dropdown:hover .nav-summary {
+.nav-dropdown:hover .nav-summary,
+.nav-dropdown:focus-within .nav-summary {
   background: rgba(255, 255, 255, 0.03);
 }
 
@@ -196,7 +199,7 @@ img {
 
 .nav-menu {
   position: absolute;
-  top: calc(100% + 0.35rem);
+  top: 100%;
   left: 0;
   z-index: 20;
   display: none;
@@ -210,7 +213,8 @@ img {
 }
 
 .nav-dropdown[open] .nav-menu,
-.nav-dropdown:hover .nav-menu {
+.nav-dropdown:hover .nav-menu,
+.nav-dropdown:focus-within .nav-menu {
   display: block;
 }
 
