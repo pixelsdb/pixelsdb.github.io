@@ -18,41 +18,49 @@
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-text">PixelsDB</span>
       </a>
-      <a class="source-link" href="https://github.com/pixelsdb/pixels">pixelsdb/pixels</a>
+      <div class="header-actions">
+        <a class="source-link icon-link" href="https://github.com/pixelsdb/pixels" aria-label="Open PixelsDB on GitHub" title="Open PixelsDB on GitHub">
+          <svg class="header-icon" viewBox="0 0 16 16" aria-hidden="true" fill="currentColor">
+            <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.5 7.5 0 0 1 8 3.8c.68 0 1.37.09 2.02.27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"></path>
+          </svg>
+        </a>
+      </div>
     </div>
     <nav class="site-nav" aria-label="Primary">
       <div class="container site-nav-list">
         <a class="nav-link" href="index.html">Home</a>
-        <a class="nav-link nav-link-active" href="documents.html">Documents</a>
-        <a class="nav-link" href="publications.html">Publications</a>
-        <a class="nav-link" href="index.html#research">Research</a>
+        <details class="nav-dropdown">
+          <summary class="nav-link nav-summary nav-link-active">Documents</summary>
+          <div class="nav-menu">
+            <a href="documents.html#get-started">Get Started</a>
+            <a href="documents.html#user-guide">User Guide</a>
+            <a href="documents.html#specification">Specification</a>
+            <a href="documents.html#integrations">Integrations</a>
+            <a href="documents.html#sdk">SDK</a>
+          </div>
+        </details>
+        <a class="nav-link" href="applications.html">Applications</a>
+        <a class="nav-link" href="research.html">Research</a>
+        <details class="nav-dropdown">
+          <summary class="nav-link nav-summary">Pixels Lab</summary>
+          <div class="nav-menu">
+            <a href="team.html#members">Members</a>
+            <a href="team.html#research-projects">Research Projects</a>
+            <a href="team.html#student-projects">Student Projects</a>
+            <a href="team.html#publications">Publications</a>
+            <a href="team.html#awards">Awards</a>
+            <a href="team.html#sponsors">Sponsors</a>
+          </div>
+        </details>
       </div>
     </nav>
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="container">
-        <p class="eyebrow">Documents</p>
-        <h1>PixelsDB Docs</h1>
-        <p class="hero-kicker">Guides, releases, and ecosystem references in one place.</p>
-        <hr class="intro-divider">
-        <p class="hero-text">
-          Find build and release resources for the main project, along with the representative
-          repositories that make up the broader PixelsDB ecosystem.
-        </p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="https://github.com/pixelsdb/pixels/blob/master/README.md">Open the README</a>
-          <a class="button" href="https://deepwiki.com/pixelsdb/pixels">Browse DeepWiki</a>
-          <a class="button" href="https://github.com/pixelsdb/pixels/releases/tag/daily-latest">Daily builds</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
+    <section id="get-started" class="section">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">Documents</p>
+          <p class="eyebrow">Get Started</p>
           <h2>Guides, references, and releases</h2>
           <p>
             Start with the main codebase documentation, browse DeepWiki summaries, or download the
@@ -86,9 +94,91 @@
             <a href="https://github.com/pixelsdb/pixels/releases/tag/daily-latest">Get daily builds</a>
           </article>
         </div>
+      </div>
+    </section>
 
+    <section id="user-guide" class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">User Guide</p>
+          <h2>Deployment and evaluation workflows</h2>
+          <p>
+            Follow the project guides for installation, benchmark setup, and evaluation on
+            analytical workloads.
+          </p>
+        </div>
+        <div class="card-grid three-up">
+          <article class="card">
+            <h3>Install Pixels</h3>
+            <p>
+              Set up Pixels services, metadata, and dependencies using the primary installation
+              guide from the main repository.
+            </p>
+            <a href="https://github.com/pixelsdb/pixels/blob/master/docs/INSTALL.md">Open installation guide</a>
+          </article>
+          <article class="card">
+            <h3>TPC-H evaluation</h3>
+            <p>
+              Reproduce benchmark-oriented experiments and learn how Pixels is evaluated on standard
+              analytical workloads.
+            </p>
+            <a href="https://github.com/pixelsdb/pixels/blob/master/docs/TPC-H.md">Read the TPC-H guide</a>
+          </article>
+          <article class="card">
+            <h3>ClickBench evaluation</h3>
+            <p>
+              Explore ClickBench-oriented evaluation steps for additional workload and performance
+              comparisons.
+            </p>
+            <a href="https://github.com/pixelsdb/pixels/blob/master/docs/CLICKBENCH.md">Read the ClickBench guide</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="specification" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Specification</p>
+          <h2>Architecture and core references</h2>
+          <p>
+            Use these references to understand the main engine layout, deployment surfaces, and
+            architectural organization of PixelsDB.
+          </p>
+        </div>
+        <div class="card-grid three-up">
+          <article class="card">
+            <h3>Project overview</h3>
+            <p>
+              The main README summarizes the Pixels engine, storage goals, supported backends, and
+              major subsystems.
+            </p>
+            <a href="https://github.com/pixelsdb/pixels/blob/master/README.md">Read the overview</a>
+          </article>
+          <article class="card">
+            <h3>Architecture guide</h3>
+            <p>
+              DeepWiki provides a navigable architecture view covering modules, services, and code
+              references across the repository.
+            </p>
+            <a href="https://deepwiki.com/pixelsdb/pixels">Browse DeepWiki architecture</a>
+          </article>
+          <article class="card">
+            <h3>Service deployment reference</h3>
+            <p>
+              The installation documentation also serves as an operational reference for daemon
+              roles, ports, and system dependencies.
+            </p>
+            <a href="https://github.com/pixelsdb/pixels/blob/master/docs/INSTALL.md">Open deployment reference</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="integrations" class="section section-alt">
+      <div class="container">
         <div class="section-heading section-heading-spaced">
-          <p class="eyebrow">Ecosystem</p>
+          <p class="eyebrow">Integrations</p>
           <h2>Representative repositories</h2>
           <p>
             The GitHub organization includes the core engine, integrations, supporting services, and
@@ -151,6 +241,45 @@
           <article class="repo-card">
             <h3><a href="https://github.com/pixelsdb/mini-pixels">pixelsdb/mini-pixels</a></h3>
             <p>Educational analytic storage engine derived from Pixels for learning and teaching.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="sdk" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SDK</p>
+          <h2>Developer interfaces and implementation entry points</h2>
+          <p>
+            Explore the main implementation surfaces for developers working with PixelsDB in C++,
+            Java, and operational tooling.
+          </p>
+        </div>
+        <div class="card-grid three-up">
+          <article class="card">
+            <h3>C++ implementation</h3>
+            <p>
+              The C++ tree contains the low-level implementation, DuckDB integration, and build
+              instructions for native components.
+            </p>
+            <a href="https://github.com/pixelsdb/pixels/blob/master/cpp/README.md">Open the C++ README</a>
+          </article>
+          <article class="card">
+            <h3>CLI and daemon tooling</h3>
+            <p>
+              Pixels ships operational tooling for service deployment and command-line interaction
+              through the daemon and CLI modules.
+            </p>
+            <a href="https://github.com/pixelsdb/pixels/tree/master/pixels-cli">Explore CLI sources</a>
+          </article>
+          <article class="card">
+            <h3>Java module tree</h3>
+            <p>
+              The Java codebase contains the storage engine, services, connectors, and execution
+              components that make up the broader system.
+            </p>
+            <a href="https://github.com/pixelsdb/pixels">Browse the full repository</a>
           </article>
         </div>
       </div>

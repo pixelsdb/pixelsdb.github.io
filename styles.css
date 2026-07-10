@@ -70,6 +70,13 @@ img {
   min-height: 4.5rem;
 }
 
+.header-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -97,6 +104,7 @@ img {
 .source-link {
   display: inline-flex;
   align-items: center;
+  gap: 0.55rem;
   min-height: 2.5rem;
   padding: 0.45rem 0.95rem;
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -105,6 +113,19 @@ img {
   color: #ffffff;
   font-size: 0.95rem;
   font-weight: 500;
+}
+
+.icon-link {
+  justify-content: center;
+  width: 2.5rem;
+  min-width: 2.5rem;
+  padding: 0;
+}
+
+.header-icon {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
 }
 
 .site-nav {
@@ -116,7 +137,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 0;
-  overflow-x: auto;
+  align-items: stretch;
+  overflow: visible;
 }
 
 .nav-link {
@@ -137,6 +159,73 @@ img {
 .nav-link-active {
   border-bottom-color: var(--accent);
   color: #ffffff;
+}
+
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  flex: 0 0 auto;
+}
+
+.nav-summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.nav-summary::-webkit-details-marker {
+  display: none;
+}
+
+.nav-summary::after {
+  content: "▾";
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.nav-dropdown[open] .nav-summary,
+.nav-dropdown:hover .nav-summary {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.nav-summary.nav-link-active {
+  border-bottom-color: var(--accent);
+  color: #ffffff;
+}
+
+.nav-menu {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  z-index: 20;
+  display: none;
+  min-width: 14rem;
+  max-width: min(18rem, calc(100vw - 2rem));
+  padding: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: var(--surface);
+  box-shadow: 0 18px 40px rgba(10, 16, 32, 0.22);
+}
+
+.nav-dropdown[open] .nav-menu,
+.nav-dropdown:hover .nav-menu {
+  display: block;
+}
+
+.nav-menu a {
+  display: block;
+  padding: 0.7rem 0.85rem;
+  border-radius: 0.65rem;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  background: var(--accent-soft);
+  color: var(--accent-dark);
 }
 
 .hero {
@@ -420,5 +509,16 @@ h3 {
 
   .site-nav-list {
     width: 100%;
+    overflow: visible;
+  }
+
+  .nav-dropdown {
+    width: auto;
+  }
+
+  .nav-menu {
+    position: absolute;
+    min-width: 14rem;
+    margin: 0;
   }
 }
